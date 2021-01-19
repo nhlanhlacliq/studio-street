@@ -28,15 +28,21 @@
     <source src="audio/KFC.mp3" type="audio/mpeg" />
     There's no singing Georgopoulos for you :(
   </audio>
+  <audio id="beepAudio">
+    <source src="audio/beep.mp3" type="audio/mpeg" />
+  </audio>
 
   <script>
     var x = document.getElementById("kfcAudio");
+    var beep = document.getElementById("beepAudio");
+    beep.volume = 0.1;
 
     function play_pauseAudio(checkbox) {
       if (checkbox.checked) {
         x.play();
       } else {
         x.pause();
+        beep.play();
       }
     }
   </script>
