@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <head>
+  <title>Studio Street</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 </head>
+
 <body>
   <div class="max-width">
     <label class="label">
@@ -10,7 +13,9 @@
           class="toggle-state"
           type="checkbox"
           name="check"
+          id="check"
           value="check"
+          onchange="play_pauseAudio(this)"
         />
         <div class="indicator"></div>
       </div>
@@ -18,4 +23,21 @@
       <p>Str.</p>
     </label>
   </div>
+
+  <audio id="kfcAudio">
+    <source src="audio/KFC.mp3" type="audio/mpeg" />
+    There's no singing Georgopoulos for you :(
+  </audio>
+
+  <script>
+    var x = document.getElementById("kfcAudio");
+
+    function play_pauseAudio(checkbox) {
+      if (checkbox.checked) {
+        x.play();
+      } else {
+        x.pause();
+      }
+    }
+  </script>
 </body>
