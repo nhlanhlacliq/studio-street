@@ -1,52 +1,117 @@
 <!DOCTYPE html>
-<head>
-  <title>Studio Street</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-</head>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Studio Street</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
 
-<body>
-  <div class="max-width">
-    <label class="label">
-      <div class="toggle">
-        <input
-          class="toggle-state"
-          type="checkbox"
-          name="check"
-          id="check"
-          value="check"
-          onchange="play_pauseAudio(this)"
-        />
-        <div class="indicator"></div>
+  <body>
+    <section id="Home">
+      <div class="max-width">
+        <label class="label">
+          <div class="toggle">
+            <input
+              class="toggle-state"
+              type="checkbox"
+              name="check"
+              id="check"
+              value="check"
+              onchange="play_pauseAudio(this)"
+            />
+            <div class="indicator"></div>
+          </div>
+          <div class="label-text">Studio</div>
+          <p>str.</p>
+        </label>
+        <footer>
+          <p>© Science Over B*tches Copyright 2020</p>
+        </footer>
       </div>
-      <div class="label-text">Studio</div>
-      <p>str.</p>
-    </label>
-    <footer> 
-      <p>&copy; Science Over Bitches Copyright 2019</p>
-    </footer>
-  </div>
 
-  <audio id="kfcAudio">
-    <source src="audio/KFC.mp3" type="audio/mpeg" />
-    Unfortunately there's no singing Georgopoulos for you :(
-  </audio>
-  <audio id="beepAudio">
-    <source src="audio/beep.mp3" type="audio/mpeg" />
-  </audio>
+      <audio id="kfcAudio">
+        <source src="assets/audio/KFC.mp3" type="audio/mpeg" />
+        Unfortunately there's no singing Georgopoulos for you :(
+      </audio>
+      <audio id="beepAudio">
+        <source src="assets/audio/beep.mp3" type="audio/mpeg" />
+      </audio>
 
-  <script>
-    var x = document.getElementById("kfcAudio");
-    var beep = document.getElementById("beepAudio");
-    beep.volume = 0.1;
+      <script>
+        var x = document.getElementById("kfcAudio");
+        var beep = document.getElementById("beepAudio");
+        beep.volume = 0.1;
 
-    function play_pauseAudio(checkbox) {
-      if (checkbox.checked) {
-        x.play();
-      } else {
-        x.pause();
-        beep.play();
-      }
-    }
-  </script>
-</body>
+        function play_pauseAudio(checkbox) {
+          if (checkbox.checked) {
+            x.play();
+          } else {
+            x.pause();
+            beep.play();
+          }
+        }
+      </script>
+      <nav
+        class="navbar navbar-light navbar-expand-md fixed-top text-uppercase shadow-lg"
+      >
+        <div class="container-fluid">
+          <a
+            class="navbar-brand"
+            href="#"
+            style="
+              background-image: url('assets/img/Studio%20street%20brand%20logos-12.svg');
+              background-repeat: no-repeat;
+              background-position: center;
+            "
+            >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a
+          ><button
+            data-toggle="collapse"
+            class="navbar-toggler"
+            data-target="#navcol-1"
+          >
+            <span class="sr-only">Toggle navigation</span
+            ><span
+              class="navbar-toggler-icon"
+              style="
+                filter: blur(0px) brightness(200%) contrast(200%)
+                  grayscale(100%) hue-rotate(0deg) invert(100%);
+              "
+            ></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav text-uppercase ml-auto">
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link active"
+                  href="#"
+                  style="color: rgba(255, 255, 255, 0.86)"
+                  >HALO</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link active"
+                  href="#"
+                  style="color: rgba(255, 255, 255, 0.86)"
+                  >Thabo's Story</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
