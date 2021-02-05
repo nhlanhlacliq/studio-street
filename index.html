@@ -22,6 +22,7 @@
 
   <body>
     <section id="Home">
+      <!-- Slider button. The "Radion Player" -->
       <div class="max-width">
         <label class="label">
           <div class="toggle">
@@ -43,6 +44,7 @@
         </footer>
       </div>
 
+      <!-- The song played & The click sound when turning off -->
       <audio id="kfcAudio">
         <source src="assets/audio/KFC.mp3" type="audio/mpeg" />
         Unfortunately there's no singing Georgopoulos for you :(
@@ -51,6 +53,7 @@
         <source src="assets/audio/beep.mp3" type="audio/mpeg" />
       </audio>
 
+      <!-- Javascript script.. Lol. Plays the audio -->
       <script>
         var x = document.getElementById("kfcAudio");
         var beep = document.getElementById("beepAudio");
@@ -65,10 +68,13 @@
           }
         }
       </script>
+
+      <!-- Navigation bar at top of page -->
       <nav
         class="navbar navbar-light navbar-expand-md fixed-top text-uppercase shadow-lg"
       >
         <div class="container-fluid">
+          <!-- Brand Logo -->
           <a
             class="navbar-brand"
             href="#"
@@ -94,6 +100,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav text-uppercase ml-auto">
+              <!-- Halo Link -->
               <li class="nav-item" role="presentation">
                 <a
                   class="nav-link active"
@@ -102,6 +109,8 @@
                   >HALO</a
                 >
               </li>
+
+              <!-- Thami's Link -->
               <li class="nav-item" role="presentation">
                 <a
                   class="nav-link active"
@@ -110,6 +119,8 @@
                   >Webcomic 36</a
                 >
               </li>
+
+              <!-- JB's Link -->
               <li class="nav-item" role="presentation">
                 <a
                   class="nav-link active"
